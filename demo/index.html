@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <title>jquery.inputFileWidth Demo</title>
+    
+    <style type="text/css">
+    
+        .container 
+        {
+            width: 50%; 
+            border: 1px dashed #ccc;
+            position: relative;
+            margin: 10px;
+        }
+        
+        input[type="file"]
+        {
+            width: 100%;
+        }
+        
+    </style>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../jquery.inputFileWidth.js"></script>
+    <script type="text/javascript">
+	    
+		$(document).ready(function() 
+		{
+			$("#c1 input").inputFileWidth("100%");
+			$("#c2 input").inputFileWidth("50%");
+			$("#c3 input").inputFileWidth("200px");
+		});
+        
+    </script>
+    
+</head> 
+<body>
+
+    <h1>jquery.inputFileWidth Demo</h1>
+
+    <form action="#">
+      
+	  <input type="hidden" id="hiddentest" />
+	  
+      <div class="container" id="c0">
+          without inputFileWidth<br/>
+          <input type="file" class="fileselect" />
+      </div>
+      
+      <div class="container" id="c1">
+          inputFileWidth("100%")<br/>
+          <input type="file" class="fileselect" />
+      </div>
+	    
+	    <div class="container" id="c2">
+	        inputFileWidth("50%")<br/>
+	        <input type="file" class="fileselect" />
+	    </div>
+      
+      <div class="container" id="c3">
+          inputFileWidth("200px")<br/>
+          <input type="file" class="fileselect" />
+      </div>
+	    
+    </form>
+
+    <hr/>
+
+    <button onclick="$("input").inputFileWidth('100%');">Set all input's to 100%</button>
+    <button onclick="$("input").inputFileWidth('50%');">Set all input's to 50%</button>
+    <button onclick="$("input").inputFileWidth('200px');">Set all input's to 200px</button>
+
+</body>
+</html>
