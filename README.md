@@ -10,6 +10,8 @@ also in Firefox. It used the size attribute from the input element to change
 the width. The calculated size is unfortunately only a approximation to the 
 real size, so there can be a deviation of some pixels to the desired size.
 
+Demo: [http://schueller.me/projects/jquery-plugins/](http://schueller.me/projects/jquery-plugins/#inputFileWidth)
+
 Usage
 -----
 
