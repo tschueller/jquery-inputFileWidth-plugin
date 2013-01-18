@@ -1,7 +1,7 @@
 /*
  * jQuery inputFileWidth Plugin v1.0.2 
  * Sets the width of an input file element.
- * Copyright (c) 2010-2012, Thorsten Schüller 
+ * Copyright (c) 2010-2013, Thorsten Schüller 
  * http://schueller.me/projects/
  * Licensed under the MIT license.
  */

@@ -1,0 +1,29 @@
+{
+    "name": "inputFileWidth",
+    "title": "jQuery inputFileWidth Plugin",
+    "description": "The jQuery inputFileWidth plugin sets the width of an input file element, also in FireFox.",
+    "keywords": [
+		"file",
+        "upload",
+        "firefox",
+        "input"
+    ],
+    "version": "1.0.2",
+    "author": {
+        "name": "Thorsten Schüller",
+        "email": "thorsten@schueller.me"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/tschueller/jquery-inputFileWidth-plugin/blob/master/LICENSE.txt"
+        }
+    ],
+    "bugs": "https://github.com/tschueller/jquery-inputFileWidth-plugin/issues",
+    "homepage": "https://github.com/tschueller/jquery-inputFileWidth-plugin",
+    "docs": "https://github.com/tschueller/jquery-inputFileWidth-plugin",
+    "demo": "http://schueller.me/projects/jquery-plugins/inputFileWidth/demo/",
+    "dependencies": {
+        "jquery": ">=1.6"
+    }
+}
