@@ -1,5 +1,5 @@
 /*!
- * jQuery inputFileWidth Plugin v1.0.2 
+ * jQuery inputFileWidth Plugin v1.0.3 
  * Sets the width of an input file element.
  * Copyright (c) 2010-2013, Thorsten Schüller 
  * http://schueller.me/projects/
@@ -20,10 +20,26 @@
             beforeResize,
             afterResize = 0,
             i, max, 
-            containerClass = "jquery-inputFileWidthContainer";
+            containerClass = "jquery-inputFileWidthContainer",
+			ua = navigator.userAgent.toLowerCase(), 
+			uaMatch,
+			browser = "",
+			version = 0;
             
-            // Only FF need this hack
-            if ($.browser.mozilla)
+            // Only FF < version 22 need this hack. To check this I use this 
+			// dirty and old-fashioned user-agent detection (RegEx is taken 
+			// from the old and meanwhile deprecated jQuery.browser check)
+			uaMatch = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+                /(webkit)[ \/]([\w.]+)/.exec( ua ) ||
+                /(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
+                /(msie) ([\w.]+)/.exec( ua ) ||
+                ua.indexOf("compatible") < 0 && 
+					/(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
+                [];			
+			browser = uaMatch[1] || "";	
+			version = +uaMatch[2] || 0;
+			
+            if (browser == "mozilla" && version < 22)
             {
                 // Remove first an already existing container
                 if ($this.parent("."+containerClass).length) $this.unwrap();

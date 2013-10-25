@@ -10,6 +10,9 @@ also in Firefox. It used the size attribute from the input element to change
 the width. The calculated size is unfortunately only a approximation to the 
 real size, so there can be a deviation of some pixels to the desired size.
 
+**Update:** FireFox v22 has changed the look of the file-input element. There is now only one button + label and no more input element.
+See bug report: [#838675](https://bugzilla.mozilla.org/show_bug.cgi?id=838675). The plugin will therefore only required for Firefox older versions. 
+
 Demo: [http://schueller.me/projects/jquery-plugins/](http://schueller.me/projects/jquery-plugins/#inputFileWidth)
 
 Usage
